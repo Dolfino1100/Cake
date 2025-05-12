@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Stylesheet.css">
+</head>
+<style>
+    body{
+        background-color: #e3e1e1;
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
+<body>
+    <div class="container">
+        <form id="step1"> 
+            <h1>Gefeliciteerd! Kies hier jouw taart! </h1>
+            <label for="taart">welke taart wil je?</label>
+            <br>
+            <select id="taart" required>
+                <option value="">-- kies je taart --</option>
+                <option>Chocoladetaart</option>
+                <option>appeltaart</option>
+                <option>slagroomtaart</option>
+            </select>
+            <br>
+            <br>
+            <button type="button" onclick="nextStep(2)">volgende</button>
+        </form>
+
+        <form id="step2" class="hidden">
+            <h1>vul je gegevens in</h1>
+            <label for="naam" required> Naam</label>
+            <input type="text" id="naam">
+            <br>
+            <label for="verjaardag"> verjaardag </label>
+            <input type="date" id="verjaardag" required>
+            <br>
+            <br>
+            <button type="button" onclick="nextStep(3)">Volgende ➡️</button>
+        </form>
+
+        <form id="step3" class="hidden">
+            <h1>Bevestig je identiteit</h1>
+            <h4> Hier kan je inloggen met je goodzo mailadres en wachtwoord </h4>
+            <label for="Mailadres">E-mail</label>
+            <input type="text" id="mail" required>
+            <br>
+            <label for="password"> Wachtwoord </label>
+            <input type="password" id="password" required>
+            <br>
+            <br>
+            <button type="button" onclick="nextStep(4)">Volgende ➡️</button>
+        </form>
+
+        <form id="step4" class="hidden">
+            <img src="./Resources/Phish.png">
+        </form>
+    
+
+
+
+
+    </div>  
+
+
+
+<script>
+    function nextStep(step) {
+  document.getElementById('step1').classList.add('hidden');
+  document.getElementById('step2').classList.add('hidden');
+  document.getElementById('step3').classList.add('hidden');
+  document.getElementById('step4').classList.add('hidden');
+
+  document.getElementById('step' + step).classList.remove('hidden');
+}
+</script>
+  
+</body>
+</html>
