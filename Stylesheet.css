@@ -1,0 +1,48 @@
+.container{
+    text-align: center;
+    padding: 30px;
+    
+}
+
+#taart{
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
+
+button{
+    width: 400px;
+    background-color: #ff69b4;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+
+.hidden {
+    display: none;
+  }
+
+  button:hover{
+    background-color: #ff85c1;
+  }
+
+  #naam{
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 5px;
+  }
+  #verjaardag{
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  input{
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  img{
+    border-radius: 20px;
+  }
